@@ -24,7 +24,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} Tx object                        
    */
-  deserializeTx(tx:string, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object{
+  deserializeTx(tx:string, returnProtobufModel?:boolean):object{
     if (!tx) {
       throw new SdkError('tx can not be empty');
     }
@@ -46,7 +46,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} message object 
    */
-  unpackMsg(msg:{typeUrl:string,value:string}, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object|null{
+  unpackMsg(msg:{typeUrl:string,value:string}, returnProtobufModel?:boolean):object|null{
     if (!msg) {
       throw new SdkError('message can not be empty');
     }
@@ -60,36 +60,6 @@ export class Protobuf {
         }
         case types.TxType.MsgMultiSend: {
             messageModelClass = types.MsgMultiSend.getModelClass();
-            break;
-        }
-        //staking
-        case types.TxType.MsgDelegate: {
-            messageModelClass = types.MsgDelegate.getModelClass();
-            break;
-        }
-        case types.TxType.MsgUndelegate: {
-            messageModelClass = types.MsgUndelegate.getModelClass();
-            break;
-        }
-        case types.TxType.MsgBeginRedelegate: {
-            messageModelClass = types.MsgRedelegate.getModelClass();
-            break;
-        }
-        //distribution
-        case types.TxType.MsgWithdrawDelegatorReward: {
-            messageModelClass = types.MsgWithdrawDelegatorReward.getModelClass();
-            break;
-        }
-        case types.TxType.MsgSetWithdrawAddress: {
-            messageModelClass = types.MsgSetWithdrawAddress.getModelClass();
-            break;
-        }
-        case types.TxType.MsgWithdrawValidatorCommission: {
-            messageModelClass = types.MsgWithdrawValidatorCommission.getModelClass();
-            break;
-        }
-        case types.TxType.MsgFundCommunityPool: {
-            messageModelClass = types.MsgFundCommunityPool.getModelClass();
             break;
         }
         //token
@@ -191,7 +161,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} signDoc object                        
    */
-  deserializeSignDoc(signDoc:string, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object{
+  deserializeSignDoc(signDoc:string, returnProtobufModel?:boolean):object{
     if (!signDoc) {
       throw new SdkError('signDoc can not be empty');
     }
@@ -208,7 +178,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} txRaw object                        
    */
-  deserializeTxRaw(txRaw:string, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object{
+  deserializeTxRaw(txRaw:string, returnProtobufModel?:boolean):object{
     if (!txRaw) {
       throw new SdkError('txRaw can not be empty');
     }
@@ -225,7 +195,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} Signing Info object                        
    */
-  deserializeSigningInfo(signingInfo:string, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object{
+  deserializeSigningInfo(signingInfo:string, returnProtobufModel?:boolean):object{
     if (!signingInfo) {
       throw new SdkError('signing info can not be empty');
     }
@@ -242,7 +212,7 @@ export class Protobuf {
    * @param  {[type]} returnProtobufModel:bool If true, return the Protobuf model
    * @return {[type]} pubKey object                        
    */
-  deserializePubkey(pubKey:{typeUrl:string, value:string}, returnProtobufModel?:boolean):types.ValidatorSigningInfo|object{
+  deserializePubkey(pubKey:{typeUrl:string, value:string}, returnProtobufModel?:boolean):object{
     if (!pubKey) {
       throw new SdkError('pubKey can not be empty');
     }
