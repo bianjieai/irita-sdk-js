@@ -1,5 +1,5 @@
 {
-  "name": "@irita/irita-sdk-js",
+  "name": "@irita/irita-sdk",
   "version": "0.0.1",
   "description": "IRITA JavaScript SDK",
   "main": "index.js",
