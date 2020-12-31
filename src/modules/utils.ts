@@ -3,7 +3,7 @@ import * as types from '../types';
 import * as mathjs from 'mathjs';
 
 /**
- * Utils for the IRISHub SDK
+ * Utils for the IRITA SDK
  * @category Modules
  * @since v0.17
  */

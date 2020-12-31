@@ -4,7 +4,7 @@ import * as Websocket from 'isomorphic-ws';
 import { SdkError } from '../errors';
 
 /**
- * IRISHub Websocket Client
+ * IRITA Websocket Client
  * @since v0.17
  */
 export class WsClient {

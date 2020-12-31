@@ -1,2 +1,1 @@
-# irishub-sdk-js
-
+# irita-sdk-js
