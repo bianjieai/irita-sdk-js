@@ -1,2 +1,2 @@
-# irita-sdk-js
-JavaScript SDK for IRITA
+# irishub-sdk-js
+
