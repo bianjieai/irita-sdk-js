@@ -7,7 +7,7 @@ import { SdkError } from '../errors';
 import * as types from '../types';
 
 /**
- * IRISHub SDK JS Utils
+ * IRITA SDK JS Utils
  * @hidden
  */
 export class Utils {

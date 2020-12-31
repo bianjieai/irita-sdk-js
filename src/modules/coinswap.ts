@@ -15,7 +15,7 @@ import {
 import { SdkError } from '../errors';
 
 /**
- * Implementation of the [Constant Product Market Maker Model](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) token exchange protocol on IRISHub.
+ * Implementation of the [Constant Product Market Maker Model](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) token exchange protocol on IRITA.
  *
  * [More Details](https://www.irisnet.org/docs/features/coinswap.html)
  *

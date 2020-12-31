@@ -8,9 +8,9 @@ import { SdkError } from './errors';
 import * as AES from 'crypto-js/aes';
 import * as ENC from 'crypto-js/enc-utf8';
 
-/** IRISHub Client */
+/** IRITA Client */
 export class Client {
-  /** IRISHub Client Config */
+  /** IRITA Client Config */
   config: DefaultClientConfig;
 
   /** Axios client for tendermint rpc requests */
@@ -61,7 +61,7 @@ export class Client {
   /** NFT module */
   nft: modules.Nft;
 
-  /** IRISHub SDK Constructor */
+  /** IRITA SDK Constructor */
   constructor(config: DefaultClientConfig) {
     this.config = config;
     if (!this.config.rpcConfig) this.config.rpcConfig = {};
@@ -140,9 +140,9 @@ export class Client {
   }
 
   /**
-   * Set IRISHub network type
+   * Set IRITA network type
    *
-   * @param network IRISHub network type, mainnet / testnet
+   * @param network IRITA network type, mainnet / testnet
    * @returns The SDK itself
    */
   withNetwork(network: consts.Network) {
@@ -151,9 +151,9 @@ export class Client {
   }
 
   /**
-   * Set IRISHub chain-id
+   * Set IRITA chain-id
    *
-   * @param chainId IRISHub chain-id
+   * @param chainId IRITA chain-id
    * @returns The SDK itself
    */
   withChainId(chainId: string) {
@@ -199,15 +199,15 @@ export class Client {
   }
 }
 
-/** IRISHub SDK Config */
+/** IRITA SDK Config */
 export interface ClientConfig {
-  /** IRISHub node rpc address */
+  /** IRITA node rpc address */
   node: string;
 
-  /** IRISHub network type, mainnet / testnet */
+  /** IRITA network type, mainnet / testnet */
   network?: consts.Network;
 
-  /** IRISHub chain-id */
+  /** IRITA chain-id */
   chainId?: string;
 
   /** Default gas limit */
@@ -226,7 +226,7 @@ export interface ClientConfig {
   rpcConfig?: AxiosRequestConfig;
 }
 
-/** Default IRISHub Client Config */
+/** Default IRITA Client Config */
 export class DefaultClientConfig implements ClientConfig {
   node: string;
   network: consts.Network;

@@ -1,7 +1,7 @@
 {
-  "name": "@irisnet/irishub-sdk",
+  "name": "@irita/irita-sdk-js",
   "version": "0.0.1",
-  "description": "IRISHub JavaScript SDK",
+  "description": "IRITA JavaScript SDK",
   "main": "index.js",
   "typings": "index.js",
   "types": "./dist/src",
@@ -18,8 +18,8 @@
   ],
   "license": "Apache-2.0",
   "keywords": [
-    "irishub",
-    "irishub-sdk",
+    "irita",
+    "irita-sdk",
     "irisnet",
     "cosmos"
   ],
@@ -31,7 +31,7 @@
     "compile": "tsc -p .",
     "build": "rm -rf dist/* && webpack --config build --progress --colors --display-error-details && yarn run compile",
     "fix": "gts fix",
-    "docs": "npx typedoc && docker build -t irisnet/docs-irishub-sdk-js .",
+    "docs": "npx typedoc && docker build -t irita/docs-irita-sdk-js .",
     "proto-gen": "sh ./scripts/protocgen.sh"
   },
   "devDependencies": {

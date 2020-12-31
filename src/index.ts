@@ -7,11 +7,11 @@ import {
 } from './client';
 
 /**
- * Initialize IRISHub SDK
+ * Initialize IRITA SDK
  *
- * @param config IRISHub SDK [[ClientConfig]]
+ * @param config IRITA SDK [[ClientConfig]]
  *
- * @returns New IRISHub SDK Instance
+ * @returns New IRITA SDK Instance
  */
 export function newClient(config: ClientConfig): Client {
   const copyConfig = new DefaultClientConfig();

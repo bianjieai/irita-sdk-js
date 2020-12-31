@@ -83,7 +83,7 @@ const errorMap = new Map<string, number>([
   [CODESPACE_ROOT + CODES_V17.PaginationParams, CODES.InvalidRequest],
 ]);
 
-/** IRISHub SDK Error */
+/** IRITA SDK Error */
 export class SdkError extends Error {
   /** Error code space, reserved field */
   codespace = CODESPACE_ROOT;
