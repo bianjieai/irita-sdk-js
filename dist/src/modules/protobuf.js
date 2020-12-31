@@ -59,36 +59,6 @@ class Protobuf {
                 messageModelClass = types.MsgMultiSend.getModelClass();
                 break;
             }
-            //staking
-            case types.TxType.MsgDelegate: {
-                messageModelClass = types.MsgDelegate.getModelClass();
-                break;
-            }
-            case types.TxType.MsgUndelegate: {
-                messageModelClass = types.MsgUndelegate.getModelClass();
-                break;
-            }
-            case types.TxType.MsgBeginRedelegate: {
-                messageModelClass = types.MsgRedelegate.getModelClass();
-                break;
-            }
-            //distribution
-            case types.TxType.MsgWithdrawDelegatorReward: {
-                messageModelClass = types.MsgWithdrawDelegatorReward.getModelClass();
-                break;
-            }
-            case types.TxType.MsgSetWithdrawAddress: {
-                messageModelClass = types.MsgSetWithdrawAddress.getModelClass();
-                break;
-            }
-            case types.TxType.MsgWithdrawValidatorCommission: {
-                messageModelClass = types.MsgWithdrawValidatorCommission.getModelClass();
-                break;
-            }
-            case types.TxType.MsgFundCommunityPool: {
-                messageModelClass = types.MsgFundCommunityPool.getModelClass();
-                break;
-            }
             //token
             case types.TxType.MsgIssueToken: {
                 messageModelClass = types.MsgIssueToken.getModelClass();

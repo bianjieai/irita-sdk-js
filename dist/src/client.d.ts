@@ -22,16 +22,8 @@ export declare class Client {
     keys: modules.Keys;
     /** Protobuf module */
     protobuf: modules.Protobuf;
-    /** Staking module */
-    staking: modules.Staking;
     /** Tx module */
     tx: modules.Tx;
-    /** Gov module */
-    gov: modules.Gov;
-    /** Slashing module */
-    slashing: modules.Slashing;
-    /** Distribution module */
-    distribution: modules.Distribution;
     /** Service module */
     service: modules.Service;
     /** Oracle module */

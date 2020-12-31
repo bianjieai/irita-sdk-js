@@ -53,10 +53,6 @@ class Client {
         this.keys = new modules.Keys(this);
         this.tx = new modules.Tx(this);
         this.protobuf = new modules.Protobuf(this);
-        this.staking = new modules.Staking(this);
-        this.gov = new modules.Gov(this);
-        this.slashing = new modules.Slashing(this);
-        this.distribution = new modules.Distribution(this);
         this.service = new modules.Service(this);
         this.oracle = new modules.Oracle(this);
         this.random = new modules.Random(this);

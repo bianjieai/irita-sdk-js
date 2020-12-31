@@ -278,36 +278,6 @@ class Tx {
                 msg = new types.MsgMultiSend(txMsg.value);
                 break;
             }
-            //staking
-            case types.TxType.MsgDelegate: {
-                msg = new types.MsgDelegate(txMsg.value);
-                break;
-            }
-            case types.TxType.MsgUndelegate: {
-                msg = new types.MsgUndelegate(txMsg.value);
-                break;
-            }
-            case types.TxType.MsgBeginRedelegate: {
-                msg = new types.MsgRedelegate(txMsg.value);
-                break;
-            }
-            //distribution
-            case types.TxType.MsgWithdrawDelegatorReward: {
-                msg = new types.MsgWithdrawDelegatorReward(txMsg.value);
-                break;
-            }
-            case types.TxType.MsgSetWithdrawAddress: {
-                msg = new types.MsgSetWithdrawAddress(txMsg.value);
-                break;
-            }
-            case types.TxType.MsgWithdrawValidatorCommission: {
-                msg = new types.MsgWithdrawValidatorCommission(txMsg.value);
-                break;
-            }
-            case types.TxType.MsgFundCommunityPool: {
-                msg = new types.MsgFundCommunityPool(txMsg.value);
-                break;
-            }
             //token
             case types.TxType.MsgIssueToken: {
                 msg = new types.MsgIssueToken(txMsg.value);
