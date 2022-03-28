@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "IRITA JavaScript SDK",
   "main": "index.js",
-  "typings": "index.js",
   "types": "./dist/src",
   "files": [
     "dist",
