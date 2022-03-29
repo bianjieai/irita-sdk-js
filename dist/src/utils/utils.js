@@ -8,7 +8,7 @@ const RIPEMD160 = require("crypto-js/ripemd160");
 const is = require("is_js");
 const errors_1 = require("../errors");
 /**
- * IRISHub SDK JS Utils
+ * IRITA SDK JS Utils
  * @hidden
  */
 class Utils {

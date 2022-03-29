@@ -1,7 +1,7 @@
 import { Client } from '../client';
 import * as types from '../types';
 /**
- * IRISHub allows individuals and companies to create and issue their own tokens.
+ * IRITA allows individuals and companies to create and issue their own tokens.
  *
  * [More Details](https://www.irisnet.org/docs/features/asset.html)
  *

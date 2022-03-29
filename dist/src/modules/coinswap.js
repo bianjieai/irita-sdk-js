@@ -15,7 +15,7 @@ const is = require("is_js");
 const types_1 = require("../types");
 const errors_1 = require("../errors");
 /**
- * Implementation of the [Constant Product Market Maker Model](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) token exchange protocol on IRISHub.
+ * Implementation of the [Constant Product Market Maker Model](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) token exchange protocol on IRITA.
  *
  * [More Details](https://www.irisnet.org/docs/features/coinswap.html)
  *
@@ -29,7 +29,7 @@ class Coinswap {
         /** @hidden */
         this.mathConfig = {
             number: 'BigNumber',
-            precision: 64,
+            precision: 64, // 64 by default, only applicable for BigNumbers
         };
         this.client = client;
         this.math = mathjs.create(mathjs.all, this.mathConfig);
@@ -204,7 +204,7 @@ class Coinswap {
                 exact_standard_amt: exactStdAmt,
                 max_token: { denom: calculatedDenom, amount: '-1' },
                 min_liquidity: exactStdAmt,
-                deadline: 10000,
+                deadline: 10000, // default 10s
             };
             if (is.positive(Number(reservePool.standard.amount)) &&
                 is.positive(Number(reservePool.token.amount))) {
@@ -232,7 +232,7 @@ class Coinswap {
                 min_standard_amt: 0,
                 min_token: 0,
                 withdraw_liquidity: exactWithdrawLiquidity,
-                deadline: 10000,
+                deadline: 10000, // default 10s
             };
             if (is.positive(Number(reservePool.standard.amount)) &&
                 is.positive(Number(reservePool.token.amount))) {

@@ -1,4 +1,5 @@
 export * from './types';
+export * from './errors';
 export { Client, ClientConfig, KeyDAO } from './client';
 import {
   Client,

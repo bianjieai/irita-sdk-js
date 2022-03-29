@@ -24,7 +24,7 @@ export declare const CODES: {
     MempoolIsFull: number;
     TxTooLarge: number;
 };
-/** IRISHub SDK Error */
+/** IRITA SDK Error */
 export declare class SdkError extends Error {
     /** Error code space, reserved field */
     codespace: string;

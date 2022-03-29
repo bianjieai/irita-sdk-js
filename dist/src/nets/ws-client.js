@@ -15,7 +15,7 @@ const EventEmitter = require("events");
 const Websocket = require("isomorphic-ws");
 const errors_1 = require("../errors");
 /**
- * IRISHub Websocket Client
+ * IRITA Websocket Client
  * @since v0.17
  */
 class WsClient {

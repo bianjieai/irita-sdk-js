@@ -9,9 +9,9 @@ const types = require("./types");
 const errors_1 = require("./errors");
 const AES = require("crypto-js/aes");
 const ENC = require("crypto-js/enc-utf8");
-/** IRISHub Client */
+/** IRITA Client */
 class Client {
-    /** IRISHub SDK Constructor */
+    /** IRITA SDK Constructor */
     constructor(config) {
         this.config = config;
         if (!this.config.rpcConfig)
@@ -85,9 +85,9 @@ class Client {
         return this;
     }
     /**
-     * Set IRISHub network type
+     * Set IRITA network type
      *
-     * @param network IRISHub network type, mainnet / testnet
+     * @param network IRITA network type, mainnet / testnet
      * @returns The SDK itself
      */
     withNetwork(network) {
@@ -95,9 +95,9 @@ class Client {
         return this;
     }
     /**
-     * Set IRISHub chain-id
+     * Set IRITA chain-id
      *
-     * @param chainId IRISHub chain-id
+     * @param chainId IRITA chain-id
      * @returns The SDK itself
      */
     withChainId(chainId) {
@@ -140,7 +140,7 @@ class Client {
     }
 }
 exports.Client = Client;
-/** Default IRISHub Client Config */
+/** Default IRITA Client Config */
 class DefaultClientConfig {
     constructor() {
         this.node = '';

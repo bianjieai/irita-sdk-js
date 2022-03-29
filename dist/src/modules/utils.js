@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Utils = void 0;
 const mathjs = require("mathjs");
 /**
- * Utils for the IRISHub SDK
+ * Utils for the IRITA SDK
  * @category Modules
  * @since v0.17
  */
@@ -22,7 +22,7 @@ class Utils {
         /** @hidden */
         this.mathConfig = {
             number: 'BigNumber',
-            precision: 64,
+            precision: 64, // 64 by default, only applicable for BigNumbers
         };
         this.client = client;
         this.tokenMap = new Map();

@@ -1,11 +1,12 @@
 export * from './types';
+export * from './errors';
 export { Client, ClientConfig, KeyDAO } from './client';
 import { Client, ClientConfig } from './client';
 /**
- * Initialize IRISHub SDK
+ * Initialize IRITA SDK
  *
- * @param config IRISHub SDK [[ClientConfig]]
+ * @param config IRITA SDK [[ClientConfig]]
  *
- * @returns New IRISHub SDK Instance
+ * @returns New IRITA SDK Instance
  */
 export declare function newClient(config: ClientConfig): Client;

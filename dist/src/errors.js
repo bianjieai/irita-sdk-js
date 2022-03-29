@@ -82,7 +82,7 @@ const errorMap = new Map([
     [CODESPACE_ROOT + CODES_V17.ServiceTxLimit, exports.CODES.InvalidRequest],
     [CODESPACE_ROOT + CODES_V17.PaginationParams, exports.CODES.InvalidRequest],
 ]);
-/** IRISHub SDK Error */
+/** IRITA SDK Error */
 class SdkError extends Error {
     /**
      * Initialize SdkError with irishub error msg

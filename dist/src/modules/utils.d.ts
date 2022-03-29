@@ -1,7 +1,7 @@
 import { Client } from '../client';
 import * as types from '../types';
 /**
- * Utils for the IRISHub SDK
+ * Utils for the IRITA SDK
  * @category Modules
  * @since v0.17
  */

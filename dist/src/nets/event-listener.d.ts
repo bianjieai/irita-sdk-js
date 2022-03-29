@@ -3,7 +3,7 @@ import * as types from '../types';
 import { EventQueryBuilder } from '../types';
 import { Client } from '../client';
 /**
- * IRISHub Event Listener
+ * IRITA Event Listener
  * @since v0.17
  */
 export declare class EventListener {

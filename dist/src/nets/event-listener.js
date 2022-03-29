@@ -35,7 +35,7 @@ class EventDAO {
     }
 }
 /**
- * IRISHub Event Listener
+ * IRITA Event Listener
  * @since v0.17
  */
 class EventListener {
