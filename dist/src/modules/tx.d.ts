@@ -96,4 +96,11 @@ export declare class Tx {
         type: string;
         value: any;
     }): any;
+    /**
+     * estimate gas fee needed for the tx
+     * @param msgs Msgs to be sent
+     * @param baseTx
+     * @returns SimulateResult
+     */
+    simulate(msgs: any[], baseTx: types.BaseTx): Promise<types.SimulateResult>;
 }

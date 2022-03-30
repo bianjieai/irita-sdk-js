@@ -55,6 +55,7 @@ export const crypto_ed25519_keys_pb = require( './proto-types/cosmos/crypto/ed25
 export const crypto_sm2_keys_pb = require( './proto-types/cosmos/crypto/sm2/keys_pb');
 export const base_coin_pb = require('./proto-types/cosmos/base/v1beta1/coin_pb');
 export const signing_signing_pb = require('./proto-types/cosmos/tx/signing/v1beta1/signing_pb');
+export const simulate_pb = require('./proto-types/cosmos/base/simulate/v1beta1/simulate_pb');
 
 //irimod module
 export const token_token_pb = require( './proto-types/irismod/token/token_pb');

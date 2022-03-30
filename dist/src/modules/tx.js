@@ -357,6 +357,23 @@ class Tx {
         }
         return msg;
     }
+    /**
+     * estimate gas fee needed for the tx
+     * @param msgs Msgs to be sent
+     * @param baseTx
+     * @returns SimulateResult
+     */
+    simulate(msgs, baseTx) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // Build Unsigned Tx
+            const unsignedTx = this.buildTx(msgs, baseTx);
+            // Sign Tx
+            const signedTx = yield this.sign(unsignedTx, baseTx);
+            const request = new types.simulate_pb.SimulateRequest(signedTx);
+            console.log(request.getTx());
+            return yield this.client.rpcClient.protoQuery('/cosmos.base.simulate.v1beta1.SimulateService/Simulate', request, types.simulate_pb.SimulateResponse);
+        });
+    }
 }
 exports.Tx = Tx;
 //# sourceMappingURL=tx.js.map

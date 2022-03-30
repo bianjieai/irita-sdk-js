@@ -39,7 +39,7 @@ export class Tx {
 
   /**
    * generate StdTx from protoTxModel
-   * @param  {[type]} protoTxModel:any instance of cosmos.tx.v1beta1.Tx 
+   * @param  {[type]} protoTxModel:any instance of cosmos.tx.v1beta1.Tx
    * @return {[type]} unsignedTx
    */
   newStdTxFromProtoTxModel(protoTxModel:any):types.ProtoTx{
@@ -330,15 +330,15 @@ export class Tx {
       }
       //coinswap
       case types.TxType.MsgAddLiquidity: {
-          
+
           break;
-      } 
+      }
       case types.TxType.MsgRemoveLiquidity: {
-          
+
           break;
-      } 
+      }
       case types.TxType.MsgSwapOrder: {
-          
+
           break;
       }
       //nft
@@ -392,5 +392,28 @@ export class Tx {
       }
     }
     return msg;
+  }
+  /**
+   * estimate gas fee needed for the tx
+   * @param msgs Msgs to be sent
+   * @param baseTx
+   * @returns SimulateResult
+   */
+  async simulate(
+    msgs: any[],
+    baseTx: types.BaseTx
+  ): Promise<types.SimulateResult> {
+    // Build Unsigned Tx
+    const unsignedTx: types.ProtoTx = this.buildTx(msgs, baseTx);
+    // Sign Tx
+    const signedTx = await this.sign(unsignedTx, baseTx);
+    const request = new types.simulate_pb.SimulateRequest(signedTx);
+    console.log(request.getTx());
+
+    return await this.client.rpcClient.protoQuery(
+      '/cosmos.base.simulate.v1beta1.SimulateService/Simulate',
+      request,
+      types.simulate_pb.SimulateResponse
+    );
   }
 }

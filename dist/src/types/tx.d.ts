@@ -56,3 +56,22 @@ export interface SearchTxsResult {
     txs: QueryTxResult[];
     total_count: string;
 }
+/** Tx simulate fee result */
+export interface SimulateResult {
+    gas_info: {
+        gas_wanted: string;
+        gas_used: string;
+    };
+    result: {
+        data: string;
+        log: string;
+        events: {
+            type: string;
+            attributes: {
+                key: string;
+                value: string;
+                index: boolean;
+            }[];
+        }[];
+    };
+}
