@@ -22,7 +22,7 @@ class Utils {
         /** @hidden */
         this.mathConfig = {
             number: 'BigNumber',
-            precision: 64, // 64 by default, only applicable for BigNumbers
+            precision: 64,
         };
         this.client = client;
         this.tokenMap = new Map();

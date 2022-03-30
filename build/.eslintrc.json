@@ -6,9 +6,11 @@
     },
     "extends":       [
         "../.eslintrc.json",
-        "plugin:node/recommended"
+        "plugin:node/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "plugins":       [ "node" ],
+    "plugins":       [ "node", "@typescript-eslint" ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2018
     },

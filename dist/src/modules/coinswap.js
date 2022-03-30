@@ -29,7 +29,7 @@ class Coinswap {
         /** @hidden */
         this.mathConfig = {
             number: 'BigNumber',
-            precision: 64, // 64 by default, only applicable for BigNumbers
+            precision: 64,
         };
         this.client = client;
         this.math = mathjs.create(mathjs.all, this.mathConfig);
@@ -204,7 +204,7 @@ class Coinswap {
                 exact_standard_amt: exactStdAmt,
                 max_token: { denom: calculatedDenom, amount: '-1' },
                 min_liquidity: exactStdAmt,
-                deadline: 10000, // default 10s
+                deadline: 10000,
             };
             if (is.positive(Number(reservePool.standard.amount)) &&
                 is.positive(Number(reservePool.token.amount))) {
@@ -232,7 +232,7 @@ class Coinswap {
                 min_standard_amt: 0,
                 min_token: 0,
                 withdraw_liquidity: exactWithdrawLiquidity,
-                deadline: 10000, // default 10s
+                deadline: 10000,
             };
             if (is.positive(Number(reservePool.standard.amount)) &&
                 is.positive(Number(reservePool.token.amount))) {
